@@ -6,8 +6,10 @@ import ee.jaltdorf.decathlon.repository.AthleteRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin (origins = "*")
 @AllArgsConstructor
 @RestController
 public class AthleteController {
@@ -22,7 +24,7 @@ public class AthleteController {
         return athleteRepository.findAll();
     }
 
-    @DeleteMapping("athletes/{id}")
+    @DeleteMapping("/athletes/{id}")
     public List<Athlete> deleteAthlete(@PathVariable Long id){
         athleteRepository.deleteById(id);
         return athleteRepository.findAll();
@@ -30,6 +32,9 @@ public class AthleteController {
 
     @PostMapping ("athletes")
     public Athlete addAthlete(@RequestBody Athlete athlete) {
+        if (athlete.getResults() == null) {
+            athlete.setResults(new ArrayList<>());
+        }
         return athleteRepository.save(athlete);
     }
 

@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -24,6 +25,6 @@ public class Athlete { //userit ei saa postgreSQL parast kasutada
     private Integer age;
 
     @OneToMany(mappedBy = "athlete", cascade = CascadeType.ALL)
-    private List<Result> results;
+    private List<Result> results = new ArrayList<>();
 
 }

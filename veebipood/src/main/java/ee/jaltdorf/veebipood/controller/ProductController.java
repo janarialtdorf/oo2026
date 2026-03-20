@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins= "*") // turvaviga *, paris arenduses seda ei teeks
+// @CrossOrigins(origins= "http://localhost:5173")
+// @CrossOrigins(origins= "http://www.arvutitark.ee") selline oleks paris arenduses, kui domeen on ostetud
 @RestController
 public class ProductController {
 
