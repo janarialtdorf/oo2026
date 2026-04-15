@@ -24,7 +24,7 @@ public class AthleteService {
 
         double total = 0;
 
-        for (Result result : athlete.getResults()) {
+        for (Result result : athlete.getResult()) {
             total += resultService.calculatePoints(result);
         }
         return total;

@@ -4,6 +4,9 @@ import ee.jaltdorf.decathlon.dto.AthleteDto;
 import ee.jaltdorf.decathlon.entity.Athlete;
 import ee.jaltdorf.decathlon.repository.AthleteRepository;
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -20,8 +23,12 @@ public class AthleteController {
 
 
     @GetMapping("athletes")
-    public List<Athlete> getAthlete(){
-        return athleteRepository.findAll();
+    public Page<Athlete> getAthlete(Pageable pageable, @RequestParam(required = false) String country
+    ) {
+        if (country == null || country.equals("all")) {
+            return athleteRepository.findAll(pageable);
+        }
+        return athleteRepository.findByCountry(country, pageable);
     }
 
     @DeleteMapping("/athletes/{id}")
@@ -32,8 +39,8 @@ public class AthleteController {
 
     @PostMapping ("athletes")
     public Athlete addAthlete(@RequestBody Athlete athlete) {
-        if (athlete.getResults() == null) {
-            athlete.setResults(new ArrayList<>());
+        if (athlete.getResult() == null) {
+            athlete.setResult(new ArrayList<>());
         }
         return athleteRepository.save(athlete);
     }

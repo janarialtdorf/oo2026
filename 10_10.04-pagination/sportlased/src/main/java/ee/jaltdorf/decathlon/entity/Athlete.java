@@ -25,6 +25,6 @@ public class Athlete { //userit ei saa postgreSQL parast kasutada
     private Integer age;
 
     @OneToMany(mappedBy = "athlete", cascade = CascadeType.ALL)
-    private List<Result> results = new ArrayList<>();
+    private List<Result> result = new ArrayList<>();
 
 }
