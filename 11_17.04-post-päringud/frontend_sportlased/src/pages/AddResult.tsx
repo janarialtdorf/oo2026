@@ -24,7 +24,7 @@ function AddResult() {
     }
 
     return (
-        <div>
+        <div  className="page">
             <label>Result:</label>
             <input
                 type="number"

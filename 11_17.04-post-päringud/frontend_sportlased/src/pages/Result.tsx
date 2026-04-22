@@ -13,7 +13,8 @@ function Result() {
     }, []);
 
   return (
-    <div>
+    <div className ="page">
+        <h1>Tulemused</h1>
       <table>
         <thead>
           <tr>

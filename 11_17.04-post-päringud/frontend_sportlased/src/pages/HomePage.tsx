@@ -60,8 +60,8 @@ function HomePage() {
                 <option>4</option>
             </select>
 
-            <button onClick={() => sortHandler("result,asc")}>Sorteeri tulemused kasvavalt</button>
-            <button onClick={() => sortHandler("result,desc")}>Sorteeri tulemused kahanevalt</button>
+            <button onClick={() => sortHandler("results,asc")}>Sorteeri tulemused kasvavalt</button>
+            <button onClick={() => sortHandler("results,desc")}>Sorteeri tulemused kahanevalt</button>
 
             {athletes.map(athlete =>
                 <div>

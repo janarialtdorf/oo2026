@@ -1,3 +1,67 @@
 body {
   text-align: center;
 }
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.info {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+select {
+    padding: 6px;
+    margin-bottom: 15px;
+}
+
+button {
+    margin: 4px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #cfcfcf;
+}
+
+/* aktiivne filter */
+.active {
+    font-weight: bold;
+    background-color: #4caf50;
+    color: white;
+}
+
+.athlete-list {
+    margin-top: 15px;
+}
+
+.athlete-item {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pagination {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 40px;
+    font-family: Arial, sans-serif;
+}

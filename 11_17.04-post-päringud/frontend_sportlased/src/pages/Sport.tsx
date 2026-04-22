@@ -10,7 +10,7 @@ function Sport() {
   }, []);
 
   return (
-    <div>
+    <div className="page">
       <h1>Spordialad</h1>
       <table>
         <thead>

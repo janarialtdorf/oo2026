@@ -19,7 +19,7 @@ public class Result {
 
     private Integer results;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "athlete_id", nullable = false)
     private Athlete athlete;
 

@@ -3,6 +3,8 @@ export type Result = {
     results: number;
     athlete: {
         id: number;
+        firstName?: string;
+        lastName?: string;
     };
     sport: {
         id: number;

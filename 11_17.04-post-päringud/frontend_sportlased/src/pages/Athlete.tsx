@@ -37,7 +37,7 @@ function Athlete() {
     };
 
     return (
-        <div>
+        <div  className="page">
             <h2>Lisa uus sportlane</h2>
             <label>First Name:</label> <br />
             <input
@@ -68,6 +68,8 @@ function Athlete() {
             /> <br />
 
             <button onClick={addAthlete}>Add Athlete</button>
+            <br /> <br /> <br />
+            
             <table>
                 <thead>
                     <tr>
