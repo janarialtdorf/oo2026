@@ -91,7 +91,7 @@ function HomePage() {
                 </button>
             ))}
 
-            <button onClick={() => setActiveCountry("all")}>All</button>
+
             <button onClick={() => setActiveCountry("USA")}>USA</button>
             <button onClick={() => setActiveCountry("UK")}>UK</button>
             <button onClick={() => setActiveCountry("GER")}>GER</button>

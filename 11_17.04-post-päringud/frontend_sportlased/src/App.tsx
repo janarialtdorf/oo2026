@@ -30,10 +30,6 @@ function App() {
         <button>Lisa Tulemus</button>
       </Link>
 
-      <Link to="/addathlete">
-        <button>Lisa Sportlane</button>
-      </Link>
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/athlete" element={<Athlete />} />

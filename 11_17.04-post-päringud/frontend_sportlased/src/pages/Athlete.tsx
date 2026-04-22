@@ -96,5 +96,4 @@ function Athlete() {
         </div>
     )
 }
-
 export default Athlete
