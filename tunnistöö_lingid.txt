@@ -1,0 +1,2 @@
+backend:https://github.com/janarialtdorf/oo2026-backend
+frontend:https://github.com/janarialtdorf/oo2026-frontend
